@@ -24,13 +24,11 @@ public class Main {
 		y.b = sc.nextDouble();
 		y.c = sc.nextDouble();
 		
-		// Processamentos: Calculando valor de p e area do triângulo X:
-		double p = (x.a + x.b + x.c) / 2.0;
-		double areaX = Math.sqrt(p * (p + x.a) * (p - x.b) * (p * x.c));
+		// Chamando metódo responsável por calcular a areaX:
+		double areaX = x.calcArea();
 		
-		// Processamentos: Calculando valor de p e area do triângulo Y:
-		p = (y.a + y.b + y.c) / 2.0;
-		double areaY = Math.sqrt(p * (p + y.a) * (p - y.b) * (p * y.c));
+		// Chamando metódo responsável por calcular a areaY:
+		double areaY = y.calcArea();	
 		
 		// Saídas
 		System.out.printf("Triangle X area: %.4f", areaX);
